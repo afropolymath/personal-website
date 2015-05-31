@@ -18,7 +18,8 @@
     "ng-file-upload": "~2.0.2",
     "jquery": "~2.1.4",
     "ng-timeago": "~0.0.2",
-    "toastr": "~2.1.1"
+    "toastr": "~2.1.1",
+    "jquery.scrollTo": "~2.1.0"
   },
   "resolutions": {
     "firebase": "2.1.x"

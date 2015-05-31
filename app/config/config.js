@@ -39,9 +39,9 @@ app.controller('CoreNavController', ['$scope', '$location', '$timeout', '$anchor
   });
 
   $scope.goToDiv = function(id) {
-    $location.hash(id);
-    $anchorScroll();
+    $(window).scrollTo('#' + id, 800);
   };
+
   $(window).scroll(function() {
     if(inverse) {
       if($(window).scrollTop() <= 70) {
