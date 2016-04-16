@@ -87,7 +87,7 @@ gulp.task('watch', function() {
 
   // Watch .js files
   gulp.watch(paths.js, ['scripts']);
-  
+
   // Watch .jade files
   gulp.watch(paths.jade, ['jade']);
 
@@ -97,4 +97,4 @@ gulp.task('watch', function() {
 });
 
 // Default task
-gulp.task('default', ['connect', 'watch', 'lint']);
+gulp.task('default', ['connect', 'watch']);
