@@ -98,3 +98,5 @@ gulp.task('watch', function() {
 
 // Default task
 gulp.task('default', ['connect', 'watch']);
+
+gulp.task('build', ['scripts', 'styles', 'jade'])
