@@ -12,13 +12,13 @@ var app = express();
 
   // static files
   app.use(express.static(app.dir + '/public'));
-    
+
   // Standard error handling
   app.use(function(err, req, res, next){
     console.error(err.stack);
     res.status(500).send('Something broke!');
   });
-    
+
   // to support JSON-encoded bodies
   app.use(bodyParser.json());
 
@@ -56,7 +56,7 @@ var app = express();
       access_token_key: '15773034-joamdRd8IJyb7wAH5tjiDp9q1n8e3ES8mWf8WJwp6',
       access_token_secret: '4r6pZOsCh0A5xKkAdljKrS3lSrAIA0EZUHBGBW5bBfEX7'
     });
-     
+
     var params = {screen_name: 'Chydeeybere', count: 10};
     client.get('statuses/user_timeline', params, function(error, tweets, response){
       if (!error) {
@@ -65,11 +65,11 @@ var app = express();
     });
   });
 
-  app.get('/*', function(req, res) { 
+  app.get('/*', function(req, res) {
     res.sendFile("index.html", {root:'./public'});
   });
 
-  var server = app.listen(3000, function() {
+  var server = app.listen(process.env.port || 3000, function() {
     console.log("Express server listening on port 3000");
   });
 })(process.cwd());
