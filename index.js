@@ -69,7 +69,7 @@ var app = express();
     res.sendFile("index.html", {root:'./public'});
   });
 
-  var server = app.listen(process.env.port || 3000, function() {
+  var server = app.listen(process.env.PORT || 3000, function() {
     console.log("Express server listening on port 3000");
   });
 })(process.cwd());

@@ -7,7 +7,6 @@ var gulp = require('gulp'),
   rename = require('gulp-rename'),
   concat = require('gulp-concat'),
   concatCss = require('gulp-concat-css'),
-  notify = require('gulp-notify'),
   cache = require('gulp-cache'),
   livereload = require('gulp-livereload'),
   nodemon = require('gulp-nodemon'),
@@ -32,38 +31,26 @@ gulp.task('uglify', function() {
   return gulp.src(paths.js)
     .pipe(concat('app.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('public/js'))
-    .pipe(notify({
-      message: 'Uglify task complete'
-    }));
+    .pipe(gulp.dest('public/js'));
 });
 
 gulp.task('minify', function() {
   return gulp.src(paths.css)
     .pipe(concatCss('app.min.css'))
     .pipe(minifycss())
-    .pipe(gulp.dest('public/css'))
-    .pipe(notify({
-      message: 'Minify task complete'
-    }));
+    .pipe(gulp.dest('public/css'));
 });
 
 gulp.task('styles', function() {
   return gulp.src(paths.css)
     .pipe(concatCss('app.css'))
-    .pipe(gulp.dest('public/css'))
-    .pipe(notify({
-      message: 'Styles task complete'
-    }));
+    .pipe(gulp.dest('public/css'));
 });
 
 gulp.task('jade', function() {
   return gulp.src(paths.jade)
     .pipe(jade())
-    .pipe(gulp.dest('./public/partials/'))
-    .pipe(notify({
-      message: 'Jade task complete'
-    }));
+    .pipe(gulp.dest('./public/partials/'));
 });
 
 gulp.task('lint', function() {
@@ -74,10 +61,7 @@ gulp.task('lint', function() {
 gulp.task('scripts', function() {
   return gulp.src(paths.js)
     .pipe(concat('app.js'))
-    .pipe(gulp.dest('public/js'))
-    .pipe(notify({
-      message: 'Scripts task complete'
-    }));
+    .pipe(gulp.dest('public/js'));
 });
 
 // Watch
@@ -98,5 +82,4 @@ gulp.task('watch', function() {
 
 // Default task
 gulp.task('default', ['connect', 'watch']);
-
 gulp.task('build', ['scripts', 'styles', 'jade'])
