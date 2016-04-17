@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Chidiebere Nnadi</title>
+    <title>The Afropolymath :: Chidiebere Nnadi</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
@@ -50,8 +50,8 @@
         <div class="twitter-nav-bar"><i class="glyphicon glyphicon-cloud"></i>&nbsp; Twitter Feed</div>
         <div class="twitter-content">
           <span ng-if="!selectedTweet">Loading tweets...</span>
-          <div ng-if="selectedTweet" class="tweet-image"><img src="{{ selectedTweet.retweeted_status ? selectedTweet.retweeted_status.user.profile_image_url : selectedTweet.user.profile_image_url }}"/></div>
-          <div ng-if="selectedTweet" class="tweet-text">
+          <div ng-if="selectedTweet" class="tweet-image" ng-cloak><img src="{{ selectedTweet.retweeted_status ? selectedTweet.retweeted_status.user.profile_image_url : selectedTweet.user.profile_image_url }}"/></div>
+          <div ng-if="selectedTweet" class="tweet-text" ng-cloak>
             {{selectedTweet.text}}
             <p class="tweet-time">{{selectedTweet.created_at | timeago}}</p>
           </div>
