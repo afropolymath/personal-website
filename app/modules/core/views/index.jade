@@ -20,11 +20,11 @@ section#about-section
         .skill-set
           .skill-ranges
             .col-xs-4
-              .marker Beginner               
+              .beginner.marker              
             .col-xs-4.text-center
-              .marker Proficient             
+              .proficient.marker             
             .col-xs-4.text-right
-              .marker Expert
+              .expert.marker
           .skill-block(ng-repeat="skill in skills")
             .title(style='width:{{skill.value}}%')
               i.mdi(ng-class="skill.icon")

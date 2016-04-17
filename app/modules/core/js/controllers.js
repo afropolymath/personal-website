@@ -8,7 +8,7 @@ angular.module('core.controllers', [])
     { icon: "mdi-language-javascript", name: "AngularJS", value: 80 },
     { icon: "mdi-language-php", name: "PHP", value: 90 },
     { icon: "mdi-language-css3", name: "CSS", value: 95 },
-    { icon: "mdi-language-html5", name: "UI Design", value: 70 },
+    { icon: "mdi-language-html5", name: "UI Design", value: 90 },
     { icon: "mdi-code-braces", name: "Java", value: 60 },
     { icon: "mdi-android", name: "Mobile Application Dev.", value: 70 }
   ];
