@@ -5,13 +5,17 @@ section#about-section
     .row
       .col-md-6
         h2 About Me          
-        p I am an experienced developer of more that 5 years. I am a full stack web developer. I have worked with several programming languages including PHP, Javascript, NodeJS, Java, Python and Perl.           
-        p I currently teach Coding and Software Engineering at The Andela Institute in Lagos.            
+        p I graduated with an degree in EE from 
+          a(href="http://covenantuniversity.edu.ng") this school
+          | . I have been writing code for the web since 2007 but only started seriously building products in 2010. I consider myself a Full Stack Web Developer and I have worked with several programming languages including Python, PHP, Javascript, Java and very little Perl.          
+        p I currently teach Software Development at 
+          a(href="http://andela.com") Andela
+          |  here in Lagos, Nigeria.            
         p In my spare time I enjoy listening to good music and just thinking about crazy ideas.            
-        h2 My Stack            
-        p For the past 2 years I have used and enjoyed a tweaked version of CodeIgniter for most of my web applications with a combination of jQuery and CSS3 for FrontEnd Dev and UX. I have in the last few months evolved this stack to include NodeJS, Express, Angular and MongoDB. These new frontend technologies have also creeped into my PHP practice.           
-        p For mobile app development I make use of CSS/JS Frameworks like Ionic and BootStrap. I also develop native Android Applications using the ADT.           
+        h2 Stack Update (As at 17.04.2016)         
+        p TLDR Version - Currently still learning Python. Using web application frameworks like Django and Flask. Playing around with lots of Python Tools (Will share my best links soon. There are so many!). For infrastructure, I'm still using Amazon AWS for real work and Heroku for smaller projects (Like this site). For Databases I'm using PostgreSQL, Firebase and Redis. FrontEnd is a serious issue right now. Sticking to Angular 1.X for mission critical stuff but learning ReactJS and VueJS. Using Semantic UI for web components, Bootstrap and Flexgrid for Grid and Layouts, and building everything else from scratch.  
         p At the heart of my development is my pencil, sketchbook and Photoshop which I make use of for prototyping.         
+        p Click here to view the latest Stack Update post  
       .col-md-6
         .skill-set
           .skill-ranges
@@ -20,35 +24,35 @@ section#about-section
             .col-xs-4.text-center
               .marker Proficient             
             .col-xs-4.text-right
-              .marker Expert       
-          .skill-block
-            .title(style='width:70%') JavaScript             
-          .skill-block
-            .title(style='width:80%') AngularJS             
-          .skill-block
-            .title(style='width:60%') NodeJS
-          .skill-block
-            .title(style='width:90%') PHP
-          .skill-block
-            .title(style='width:95%') CSS
-          .skill-block
-            .title(style='width:90%') HTML
-          .skill-block
-            .title(style='width:60%') Java  
-          .skill-block
-            .title(style='width:70%') Mobile Application Dev.
+              .marker Expert
+          .skill-block(ng-repeat="skill in skills")
+            .title(style='width:{{skill.value}}%')
+              i.mdi(ng-class="skill.icon")
+              | {{skill.name}}  
 section#what-i-do-section
   .container
     .row
-      .col-md-12
-        h1 I enjoy building beautiful things
+      .col-md-6.build-software.section-header(ng-class="{selected: selectedSection == 'build'}" ng-click="selectedSection = 'build'")
+        h2 Code
+        p I build applications for the web mostly but can also build for mobile, desktop and embedded systems.
+        p
+          a(href="http://github.com/andela-cnnadi") View Github       
+      .col-md-6.design-software.section-header(ng-class="{selected: selectedSection == 'design'}" ng-click="selectedSection = 'design'")
+        h2 Design
+        p I enjoy building great experiences and aesthetically pleasing functional software.
+        p Behance Portfolio (Coming soon)
     .row
-      .col-md-6.build-software
-        h2 Build Software      
-        p I build applications for Web, Mobile and Desktop. I am mainly interested in developing applications and consulting for the Education Industry, Engineering Industry and Expert Systems. I am nevertheless very much open to exploring the world of Gaming and Entertainment.       
-      .col-md-6.design-software
-        h2 Design Interfaces          
-        p Building a good user experience and a generally aesthetically pleasing software is mandatory to keep your users coming back. I build interfaces for software for Web and Mobile. It always starts with a pencil and ensuring to have a good understanding of my audience.   
+      .col-md-12
+        .section-content(ng-if="selectedSection == 'build'")
+          h2.content-text.spacer Open Source Programmer Tools
+          p There have been several occassions when I find myself working in a repetitive manner or doing something that I find complex more than once. I decided some time ago to begin creating tools that would help me (first and foremost) and eventually any other programmer, make building things easier and faster. The kinds of tools I've been creating so far have been short code snippets that perform a single operation, CSS libraries and ORMs.
+          h2.content-text Utilities
+          p Another of my major interests is developing utility applications (for web, desktop or mobile) that could eventually turn into profitable businesses. I've worked on quite a few, though not finished with any yet, and I'm interested in collaborating on any of these ideas.
+          p My major areas of focus here include education, services, advertising and expert systems.
+
+        .section-content(ng-if="selectedSection == 'design'")
+          h2.content-text Content Loading...
+          p I've spent most of the past few years doing mostly coding and hence haven't had time to build my design portfolio. I do have a couple of things I've worked on but there has been little time to put them together. Be sure to check back for an update.
 section#contact-section
   .container
     .row
@@ -84,7 +88,7 @@ section#contact-section
           strong +234-813-265-6830.
           | Send me an e-mail on 
           a(href='mailto:chidiebere.nnadi@gmail.com') chidiebere.nnadi@gmail.com
-          | and ensure to connect with me on any of these platforms. I am almost always available on social media so give me a buzz.
+          |  and ensure to connect with me on any of these platforms. I am almost always available on social media so give me a buzz.
         |             
         .connect-icons
           ul.list-inline

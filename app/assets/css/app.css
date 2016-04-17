@@ -2,6 +2,14 @@ body {
   font-family: "Nunito", Roboto, Arial, sans-serif;
 }
 
+a {
+  color: #09DBAA;
+}
+
+a:hover {
+  color: #09DBAA;
+}
+
 .loading-overlay {
   position: fixed;
   left: 0; right: 0;
@@ -28,7 +36,7 @@ body {
 section#home-section {
   position: relative;
   background: #95e1f1;
-  background: url(../img/bg_front.png);
+  background: url(http://res.cloudinary.com/dljphicjv/image/upload/c_fill,h_1081,w_1680/v1460893159/FI3UYVGNFD_lwbxon.jpg);
   background-attachment: fixed;
   background-size: cover;
   padding-top: 3.0em;
@@ -71,23 +79,27 @@ section#home-section header nav ul {
 
 section#home-section header nav ul li {
   float: left;
-  margin-right:2em;
+  margin-right:1em;
 }
 
 section#home-section header nav ul li a {
   padding: 0 1.0em;
   display: inline-block;
   color: #283143;
+  font-family: "Titillium Web", Arial, sans-serif;
   font-size: 1.1em;
-  font-weight: 300;
+  font-weight: 500;
   height: 43px;
   line-height: 43px;
   text-decoration: none;
   cursor: pointer;
+  transition: color .5s;
 }
 
 section#home-section header nav ul li a:hover {
   text-decoration: none;
+  color: #EF6921;
+  transition: color .5s;
 }
 
 section#home-section header nav ul li:last-child {
@@ -144,7 +156,7 @@ section#home-section .twitter-feed .twitter-content .tweet-text .tweet-time {
 
 h1 {
   font-family: 'Titillium Web', sans-serif;
-  font-weight: 200;
+  font-weight: 600;
   font-size: 3.5em;
   letter-spacing: -0.03em;
   color: #FFFFFF;
@@ -163,11 +175,19 @@ h3 {
   font-weight: 500;
 }
 
+h2.content-text {
+  font-family: 'Titillium Web', sans-serif;
+}
+
 p {
   color: #656565;
   font-size: 1.0em;
   line-height: 1.8em;
   font-weight: 100;
+}
+
+.spacer {
+  margin-top: 3.0em;
 }
 
 section#about-section {
@@ -199,10 +219,14 @@ section#about-section p {
   width: 0px;
   display: inline-block;
   background: #FFF;
-  padding:1.0em;
-  font-weight: 700;
+  padding: 1.0em;
+  font-weight: 200;
   color: #283143;
   transition: all .3s;
+}
+
+.skill-block .title i {
+  margin-right: 10px;
 }
 
 .skill-ranges {
@@ -253,18 +277,38 @@ form#contact-form .form-group .form-control {
   box-shadow: none;
 }
 
-.build-software {
-  background: url(../img/icons_code.png) 30px 4.0em no-repeat;
-  padding-left: 180px;
+.section-header {
+  opacity: 0.4;
+  padding-left: 170px;
   padding-right: 30px;
   min-height: 200px;
+  border-bottom: solid 7px #efefef;
+  transition: opacity 0.3s;
+}
+
+.section-header:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.section-header.selected {
+  opacity: 1;
+  border-bottom-color: #666;
+}
+
+.section-content {
+  padding-top: 40px;
+}
+
+.build-software {
+  background: url(../img/icons_code.png) 15px 3.0em no-repeat;
+  border-right: 1px dotted #efefef;
 }
 
 .design-software {
-  background: url(../img/icons_design.png) 30px 4.0em no-repeat;
   padding-left: 180px;
-  padding-right: 30px;
-  min-height: 200px;
+  background: url(../img/icons_design.png) 25px 3.0em no-repeat;
 }
 
 .connect-icons {
@@ -281,4 +325,12 @@ form#contact-form .form-group .form-control {
   color: #fff;
   font-size: 0.8em;
   margin-top: 5px;
+}
+
+.item-list {
+  margin-top: 20px;
+}
+
+.item-list li {
+  margin-bottom: 10px;
 }
