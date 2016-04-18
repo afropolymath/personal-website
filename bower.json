@@ -1,8 +1,8 @@
 {
-  "name": "angular-seed",
-  "description": "A starter project for AngularJS",
+  "name": "personalsite",
+  "description": "Version 1 of my personal site",
   "version": "0.0.0",
-  "homepage": "https://github.com/angular/angular-seed",
+  "homepage": "https://github.com/andela-cnnadi/personal-website",
   "license": "MIT",
   "private": true,
   "dependencies": {
@@ -13,8 +13,8 @@
     "ui-router": "~0.2.13",
     "bootstrap": "~3.3.1",
     "angular-bootstrap": "~0.12.0",
-    "firebase": "~2.0.5",
-    "angularfire": "~0.9.0",
+    "firebase": "~2.4.2",
+    "angularfire": "~1.2.0",
     "ng-file-upload": "~2.0.2",
     "jquery": "~2.1.4",
     "ng-timeago": "~0.0.2",
