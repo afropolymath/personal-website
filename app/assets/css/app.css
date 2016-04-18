@@ -346,6 +346,16 @@ form#contact-form .form-group .form-control {
   width: 48px;
 }
 
+.connect-icons ul li a {
+  opacity: 0.4;
+  transition: all .3s;
+}
+
+.connect-icons ul li a:hover {
+  opacity: 1;
+  transition: all .3s;
+}
+
 .form-error {
   background-color: #D33F3F;
   padding: 5px 7px;

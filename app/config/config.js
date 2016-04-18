@@ -58,6 +58,41 @@ app.controller('CoreNavController', ['$scope', '$location', '$timeout', '$anchor
   });
 }]);
 
+app.filter('htmlLinky', function($sanitize, linkyFilter) {
+  var ELEMENT_NODE = 1;
+  var TEXT_NODE = 3;
+  var linkifiedDOM = document.createElement('div');
+  var inputDOM = document.createElement('div');
+
+  var linkify = function linkify(startNode) {
+    var i, ii, currentNode;
+
+    for (i = 0, ii = startNode.childNodes.length; i < ii; i++) {
+      currentNode = startNode.childNodes[i];
+
+      switch (currentNode.nodeType) {
+        case ELEMENT_NODE:
+          linkify(currentNode);
+          break;
+        case TEXT_NODE:
+          linkifiedDOM.innerHTML = linkyFilter(currentNode.textContent);
+          i += linkifiedDOM.childNodes.length - 1
+          while(linkifiedDOM.childNodes.length) {
+            startNode.insertBefore(linkifiedDOM.childNodes[0], currentNode);
+          }
+          startNode.removeChild(currentNode);
+      }
+    }
+
+    return startNode;
+  };
+
+  return function(input) {
+    inputDOM.innerHTML = input;
+    return linkify(inputDOM).innerHTML;
+  };
+});
+
 app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
   $stateProvider
   .state('home', {

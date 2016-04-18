@@ -52,7 +52,7 @@
           <span ng-if="!selectedTweet">Loading tweets...</span>
           <div ng-if="selectedTweet" class="tweet-image" ng-cloak><img src="{{ selectedTweet.retweeted_status ? selectedTweet.retweeted_status.user.profile_image_url : selectedTweet.user.profile_image_url }}"/></div>
           <div ng-if="selectedTweet" class="tweet-text" ng-cloak>
-            <span ng-bind-html="selectedTweet.text | linky"></span>
+            <span ng-bind-html="selectedTweet.text | htmlLinky"></span>
             <p class="tweet-time">{{selectedTweet.created_at | timeago}}</p>
           </div>
         </div>
