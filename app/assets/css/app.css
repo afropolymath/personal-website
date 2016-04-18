@@ -255,8 +255,18 @@ section#about-section p {
   background: url(../img/marker_expert.png) no-repeat;
 }
 
+section#what-i-do-section .container {
+  position: relative;
+}
+
+.what-i-do-header {
+  position: absolute;
+  left: -50px;
+  top: -8.4em;
+}
+
 section#what-i-do-section {
-  padding: 5.0em 0 10.0em 0;
+  padding: 7.0em 0 10.0em 0;
   background: url(../img/sketch_pattern.jpg) repeat-x left bottom;
 }
 
