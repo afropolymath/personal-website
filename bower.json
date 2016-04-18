@@ -24,6 +24,7 @@
     "angular-sanitize": "~1.5.5"
   },
   "resolutions": {
-    "firebase": "2.1.x"
+    "firebase": "2.1.x",
+    "angular": "1.5.5"
   }
 }
