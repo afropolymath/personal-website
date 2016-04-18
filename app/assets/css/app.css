@@ -36,7 +36,7 @@ a:hover {
 section#home-section {
   position: relative;
   background: #95e1f1;
-  background: url(http://res.cloudinary.com/dljphicjv/image/upload/c_fill,h_1081,w_1680/v1460893159/FI3UYVGNFD_lwbxon.jpg);
+  background: url(http://res.cloudinary.com/dljphicjv/image/upload/c_fill,e_blur:326,h_1081,w_1680/v1460893159/FI3UYVGNFD_lwbxon.jpg);
   background-attachment: fixed;
   background-size: cover;
   padding-top: 3.0em;
