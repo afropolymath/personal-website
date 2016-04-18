@@ -7,6 +7,7 @@ var app = angular.module("PersonalSite", [
   'ui.router',
   'ui.bootstrap',
   'ngtimeago',
+  'ngSanitize',
   'core']);
 
 app.factory('CoreNavService', ['$http', function($http){
@@ -22,9 +23,9 @@ app.factory('CoreNavService', ['$http', function($http){
 
 app.controller('CoreNavController', ['$scope', '$location', '$timeout', '$anchorScroll', 'CoreNavService', function($scope, $location, $timeout, $anchorScroll, CoreNavService) {
   var inverse = false;
-  
+
   var index = 0;
-  
+
   CoreNavService.getTweets(function(tweets) {
     $scope.tweets = tweets;
     $scope.selectedTweet = $scope.tweets[index];

@@ -52,7 +52,7 @@
           <span ng-if="!selectedTweet">Loading tweets...</span>
           <div ng-if="selectedTweet" class="tweet-image" ng-cloak><img src="{{ selectedTweet.retweeted_status ? selectedTweet.retweeted_status.user.profile_image_url : selectedTweet.user.profile_image_url }}"/></div>
           <div ng-if="selectedTweet" class="tweet-text" ng-cloak>
-            {{selectedTweet.text}}
+            <span ng-bind-html="selectedTweet.text | linky"></span>
             <p class="tweet-time">{{selectedTweet.created_at | timeago}}</p>
           </div>
         </div>
@@ -66,6 +66,7 @@
     <script src="lib/toastr/toastr.min.js"></script>
     <script src="lib/jquery.scrollTo/jquery.scrollTo.min.js"></script>
     <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-sanitize/angular-sanitize.min.js"></script>
     <script src="lib/ng-timeago/ngtimeago.js"></script>
     <script src="lib/ng-file-upload/angular-file-upload-shim.min.js"></script>
     <script src="lib/ng-file-upload/angular-file-upload.min.js"></script>
