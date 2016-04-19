@@ -59,53 +59,52 @@
             h2.content-text Content Loading...
             p I've spent most of the past few years doing mostly coding and hence haven't had time to build my design portfolio. I do have a couple of things I've worked on but there has been little time to put them together. Be sure to check back for an update.
     section#contact-section
-      .container
-        .row
-          .col-md-8.col-md-offset-2
-            h2 Get in touch      
-            p Get in touch with me to discuss interesting ideas around Software Development, Mobile Application Development, Open Source any other thing worth the while.        
-            form#contact-form(novalidate name="contact" ng-submit="sendMessage()")
-              .form-group.has-feedback(ng-class="{'has-error': contact.iName.$dirty && contact.iName.$error.required, 'has-success': contact.iName.$valid}")
-                label(for='name-field') Name               
-                input#name-field.form-control(type='text' placeholder='Enter name' required ng-model='inquiry.name' name="iName")
-                span.glyphicon.glyphicon-ok.form-control-feedback(aria-hidden="true" ng-if="contact.iName.$valid")
-                span#nameSuccessStatus.sr-only(ng-if="contact.iName.$valid") (success)
-                span.glyphicon.glyphicon-remove.form-control-feedback(aria-hidden="true" ng-if="contact.iName.$dirty && contact.iName.$error.required")
-                span#nameErrorStatus.sr-only(ng-if="contact.iName.$dirty && contact.iName.$error.required") (error)
-              .form-group.has-feedback(ng-class="{'has-error': contact.iEmail.$dirty && (contact.iEmail.$error.required || contact.iEmail.$error.email), 'has-success': contact.iEmail.$valid}")
-                label(for='email-field') E-mail Address
-                input#email-field.form-control(type='email' placeholder='Enter email' required ng-model='inquiry.email' name="iEmail")
-                span.glyphicon.glyphicon-ok.form-control-feedback(aria-hidden="true" ng-if="contact.iEmail.$valid")
-                span#emailSuccessStatus.sr-only(ng-if="contact.iEmail.$valid") (success)
-                span.glyphicon.glyphicon-remove.form-control-feedback(aria-hidden="true" ng-if="contact.iEmail.$dirty && (contact.iEmail.$error.required || contact.iEmail.$error.email)")
-                span#emailErrorStatus.sr-only(ng-if="contact.iEmail.$dirty && contact.iEmail.$error.required") (error)
-              .form-group
-                label(for='phone-field') Phone Number
-                input#phone-field.form-control(type='phone' placeholder='Enter Phone Number' ng-model='inquiry.phone' name="iPhone")           
-              .form-group(ng-class="{'has-error': contact.iMessage.$dirty && contact.iMessage.$error.required, 'has-success': contact.iMessage.$valid}")
-                label(for='message-field') Message
-                textarea#message-field.form-control(placeholder='Enter message' ng-model='inquiry.message' name="iMessage" required)
-              button.btn.btn-default(type='submit', ng-click='sendMail' ng-disabled="!contact.$valid") Send Message  
-        .row
-          .col-md-8.col-md-offset-2
-            h2 Connect with me
-            p Call me up on 
-              strong +234-813-265-6830.
-              | Send me an e-mail on 
-              a(href='mailto:chidiebere.nnadi@gmail.com') chidiebere.nnadi@gmail.com
-              |  and ensure to connect with me on any of these platforms. I am almost always available on social media so give me a buzz.
-            |             
-            .connect-icons
-              ul.list-inline
-                li
-                  a(href='http://github.com/andela-cnnadi')
-                    img(src='img/github.png')         
-                li
-                  a(href='http://facebook.com/chidiebere.nnadi')
-                    img(src='img/facebook.png')
-                li
-                  a(href='http://twitter.com/Chydeeybere')
-                    img(src='img/twitter.png')
-                li
-                  a(href='http://linked.in/pub/chidiebere')
-                    img(src='img/linkedin.png')
+      .row
+        .col-md-8.col-md-offset-2
+          h2 Get in touch      
+          p Get in touch with me to discuss interesting ideas around Software Development, Mobile Application Development, Open Source any other thing worth the while.        
+          form#contact-form(novalidate name="contact" ng-submit="sendMessage()")
+            .form-group.has-feedback(ng-class="{'has-error': contact.iName.$dirty && contact.iName.$error.required, 'has-success': contact.iName.$valid}")
+              label(for='name-field') Name               
+              input#name-field.form-control(type='text' placeholder='Enter name' required ng-model='inquiry.name' name="iName")
+              span.glyphicon.glyphicon-ok.form-control-feedback(aria-hidden="true" ng-if="contact.iName.$valid")
+              span#nameSuccessStatus.sr-only(ng-if="contact.iName.$valid") (success)
+              span.glyphicon.glyphicon-remove.form-control-feedback(aria-hidden="true" ng-if="contact.iName.$dirty && contact.iName.$error.required")
+              span#nameErrorStatus.sr-only(ng-if="contact.iName.$dirty && contact.iName.$error.required") (error)
+            .form-group.has-feedback(ng-class="{'has-error': contact.iEmail.$dirty && (contact.iEmail.$error.required || contact.iEmail.$error.email), 'has-success': contact.iEmail.$valid}")
+              label(for='email-field') E-mail Address
+              input#email-field.form-control(type='email' placeholder='Enter email' required ng-model='inquiry.email' name="iEmail")
+              span.glyphicon.glyphicon-ok.form-control-feedback(aria-hidden="true" ng-if="contact.iEmail.$valid")
+              span#emailSuccessStatus.sr-only(ng-if="contact.iEmail.$valid") (success)
+              span.glyphicon.glyphicon-remove.form-control-feedback(aria-hidden="true" ng-if="contact.iEmail.$dirty && (contact.iEmail.$error.required || contact.iEmail.$error.email)")
+              span#emailErrorStatus.sr-only(ng-if="contact.iEmail.$dirty && contact.iEmail.$error.required") (error)
+            .form-group
+              label(for='phone-field') Phone Number
+              input#phone-field.form-control(type='phone' placeholder='Enter Phone Number' ng-model='inquiry.phone' name="iPhone")           
+            .form-group(ng-class="{'has-error': contact.iMessage.$dirty && contact.iMessage.$error.required, 'has-success': contact.iMessage.$valid}")
+              label(for='message-field') Message
+              textarea#message-field.form-control(placeholder='Enter message' ng-model='inquiry.message' name="iMessage" required)
+            button.btn.btn-default(type='submit', ng-click='sendMail' ng-disabled="!contact.$valid") Send Message  
+      .row
+        .col-md-8.col-md-offset-2
+          h2 Connect with me
+          p Call me up on 
+            strong +234-813-265-6830.
+            | Send me an e-mail on 
+            a(href='mailto:chidiebere.nnadi@gmail.com') chidiebere.nnadi@gmail.com
+            |  and ensure to connect with me on any of these platforms. I am almost always available on social media so give me a buzz.
+          |             
+          .connect-icons
+            ul.list-inline
+              li
+                a(href='http://github.com/andela-cnnadi')
+                  img(src='img/github.png')         
+              li
+                a(href='http://facebook.com/chidiebere.nnadi')
+                  img(src='img/facebook.png')
+              li
+                a(href='http://twitter.com/Chydeeybere')
+                  img(src='img/twitter.png')
+              li
+                a(href='http://linked.in/pub/chidiebere')
+                  img(src='img/linkedin.png')
