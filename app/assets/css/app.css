@@ -1,3 +1,7 @@
+html, body {
+  height: 100%
+}
+
 body {
   font-family: "Nunito", Roboto, Arial, sans-serif;
 }
@@ -35,14 +39,14 @@ a:hover {
 
 section#home-section {
   position: relative;
-  background: #95e1f1;
-  background: url(http://res.cloudinary.com/dljphicjv/image/upload/c_fill,e_blur:326,h_1081,w_1680/v1460893159/FI3UYVGNFD_lwbxon.jpg);
+  height: 100%;
+  background: url(http://res.cloudinary.com/dljphicjv/image/upload/v1461077798/GKP8G1N9UV_t2ccmc.jpg) #95e1f1;
   background-attachment: fixed;
   background-size: cover;
-  padding-top: 3.0em;
+  min-height: 600px;
 }
 
-section#home-section h1, section#home-section h3 {
+section#home-section h3 {
   margin: 0;
   margin-top: 10px;
 }
@@ -107,16 +111,26 @@ section#home-section header nav ul li:last-child {
 }
 
 section#home-section .headline {
-  padding: 10.0em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   text-align: center;
 }
 
 section#home-section .twitter-feed {
+  position: absolute;
   width: 60%;
   left:0; right: 0;
+  bottom: 0;
   margin: 0 auto;
   background: #FFF;
-  z-index: 99;
+  z-index: 90;
 }
 
 section#home-section .twitter-feed .twitter-nav-bar {
