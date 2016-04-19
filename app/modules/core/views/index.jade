@@ -1,108 +1,111 @@
 .loading-overlay(ng-if="loading")
   .loading-message {{loadingMessage}}
-section#about-section
-  .container
-    .row
-      .col-md-6
-        h2 About the Afropolymath          
-        p I'm Chidiebere I Nnadi and I graduated with an degree in EE from 
-          a(href="http://covenantuniversity.edu.ng") this school
-          |  in 2012. I have been writing code for the web since 2007 but only started seriously building products in 2010. I consider myself a Full Stack Web Developer and I have worked with several programming languages including Python, PHP, Javascript, Java and very little Perl.          
-        p I currently teach Software Development at 
-          a(href="http://andela.com") Andela
-          |  here in Lagos, Nigeria.            
-        p In my spare time I enjoy listening to good music and just thinking about crazy ideas.            
-        h2 Stack Update (As at 17.04.2016)         
-        p TLDR Version - Currently still learning Python. Using web application frameworks like Django and Flask. Playing around with lots of Python Tools (Will share my best links soon. There are so many!). For infrastructure, I'm still using Amazon AWS for real work and Heroku for smaller projects (Like this site). For Databases I'm using PostgreSQL, Firebase and Redis. FrontEnd is a serious issue right now. Sticking to Angular 1.X for mission critical stuff but learning ReactJS and VueJS. Using Semantic UI for web components, Bootstrap and Flexgrid for Grid and Layouts, and building everything else from scratch.  
-        p At the heart of my development is my pencil, sketchbook and Photoshop which I make use of for prototyping.         
-        p Click here to view the latest Stack Update post  
-      .col-md-6
-        .skill-set
-          .skill-ranges
-            .col-xs-4
-              .beginner.marker              
-            .col-xs-4.text-center
-              .proficient.marker             
-            .col-xs-4.text-right
-              .expert.marker
-          .skill-block(ng-repeat="skill in skills")
-            .title(style='width:{{skill.value}}%')
-              i.mdi(ng-class="skill.icon")
-              | {{skill.name}}  
-section#what-i-do-section
-  .container
-    .what-i-do-header
-      img(src="img/what_i_do_header.png")
-    .row
-      .col-md-6.build-software.section-header(ng-class="{selected: selectedSection == 'build'}" ng-click="selectedSection = 'build'")
-        h2 Code
-        p I build applications for the web mostly but can also build for mobile, desktop and embedded systems.
-        p
-          a(href="http://github.com/andela-cnnadi") View Github       
-      .col-md-6.design-software.section-header(ng-class="{selected: selectedSection == 'design'}" ng-click="selectedSection = 'design'")
-        h2 Design
-        p I enjoy building great experiences and aesthetically pleasing functional software.
-        p Behance Portfolio (Coming soon)
-    .row
-      .col-md-12
-        .section-content(ng-if="selectedSection == 'build'")
-          h2.content-text.spacer Open Source Programmer Tools
-          p There have been several occassions when I find myself working in a repetitive manner or doing something that I find complex more than once. I decided some time ago to begin creating tools that would help me (first and foremost) and eventually any other programmer, make building things easier and faster. The kinds of tools I've been creating so far have been short code snippets that perform a single operation, CSS libraries and ORMs.
-          h2.content-text Utilities
-          p Another of my major interests is developing utility applications (for web, desktop or mobile) that could eventually turn into profitable businesses. I've worked on quite a few, though not finished with any yet, and I'm interested in collaborating on any of these ideas.
-          p My major areas of focus here include education, services, advertising and expert systems.
+.container
+  .shadow-monster
+    section#about-section
+      .row
+        .col-md-12
+          h2 About the Afropolymath          
+          p I'm Chidiebere I Nnadi and I graduated with an degree in EE from 
+            a(href="http://covenantuniversity.edu.ng") this school
+            |  in 2012. I have been writing code for the web since 2007 but only started seriously building products in 2010. I consider myself a Full Stack Web Developer and I have worked with several programming languages including Python, PHP, Javascript, Java and very little Perl.          
+          p I currently teach Software Development at 
+            a(href="http://andela.com") Andela
+            |  here in Lagos, Nigeria.            
+          p In my spare time I enjoy listening to good music and just thinking about crazy ideas.            
+          h2 Stack Update (As at 17.04.2016)         
+          p TLDR Version - Currently still learning Python. Using web application frameworks like Django and Flask. Playing around with lots of Python Tools (Will share my best links soon. There are so many!). For infrastructure, I'm still using Amazon AWS for real work and Heroku for smaller projects (Like this site). For Databases I'm using PostgreSQL, Firebase and Redis. FrontEnd is a serious issue right now. Sticking to Angular 1.X for mission critical stuff but learning ReactJS and VueJS. Using Semantic UI for web components, Bootstrap and Flexgrid for Grid and Layouts, and building everything else from scratch.  
+          p At the heart of my development is my pencil, sketchbook and Photoshop which I make use of for prototyping.         
+          p Click here to view the latest Stack Update post  
+        .col-md-12
+          h1 Stuff I know!
+          .skill-set
+            //- .skill-ranges
+            //-   .col-xs-4
+            //-     .beginner.marker              
+            //-   .col-xs-4.text-center
+            //-     .proficient.marker             
+            //-   .col-xs-4.text-right
+            //-     .expert.marker
+            .skill-block(ng-repeat="skill in skills")
+              .title
+                i.mdi(ng-class="skill.icon")
+                | {{skill.name}} 
+              .skill-bar
+                .skill-progress(style='width:{{skill.value}}%') 
+    section#what-i-do-section
+      .what-i-do-header
+        img(src="img/what_i_do_header.png")
+      .row
+        .col-md-6.build-software.section-header(ng-class="{selected: selectedSection == 'build'}" ng-click="selectedSection = 'build'")
+          h2 Code
+          p I build applications for the web mostly but can also build for mobile, desktop and embedded systems.
+          p
+            a(href="http://github.com/andela-cnnadi") View Github       
+        .col-md-6.design-software.section-header(ng-class="{selected: selectedSection == 'design'}" ng-click="selectedSection = 'design'")
+          h2 Design
+          p I enjoy building extremely beautiful experiences and aesthetically pleasing functional software.
+          p Behance Portfolio (Coming soon)
+      .row
+        .col-md-12
+          .section-content(ng-if="selectedSection == 'build'")
+            h2.content-text.spacer Open Source Programmer Tools
+            p There have been several occassions when I find myself working in a repetitive manner or doing something that I find complex more than once. I decided some time ago to begin creating tools that would help me (first and foremost) and eventually any other programmer, make building things easier and faster. The kinds of tools I've been creating so far have been short code snippets that perform a single operation, CSS libraries and ORMs.
+            h2.content-text Utilities
+            p Another of my major interests is developing utility applications (for web, desktop or mobile) that could eventually turn into profitable businesses. I've worked on quite a few, though not finished with any yet, and I'm interested in collaborating on any of these ideas.
+            p My major areas of focus here include education, services, advertising and expert systems.
 
-        .section-content(ng-if="selectedSection == 'design'")
-          h2.content-text Content Loading...
-          p I've spent most of the past few years doing mostly coding and hence haven't had time to build my design portfolio. I do have a couple of things I've worked on but there has been little time to put them together. Be sure to check back for an update.
-section#contact-section
-  .container
-    .row
-      .col-md-8.col-md-offset-2
-        h2 Get in touch      
-        p Get in touch with me to discuss interesting ideas around Software Development, Mobile Application Development, Open Source any other thing worth the while.        
-        form#contact-form(novalidate name="contact" ng-submit="sendMessage()")
-          .form-group.has-feedback(ng-class="{'has-error': contact.iName.$dirty && contact.iName.$error.required, 'has-success': contact.iName.$valid}")
-            label(for='name-field') Name               
-            input#name-field.form-control(type='text' placeholder='Enter name' required ng-model='inquiry.name' name="iName")
-            span.glyphicon.glyphicon-ok.form-control-feedback(aria-hidden="true" ng-if="contact.iName.$valid")
-            span#nameSuccessStatus.sr-only(ng-if="contact.iName.$valid") (success)
-            span.glyphicon.glyphicon-remove.form-control-feedback(aria-hidden="true" ng-if="contact.iName.$dirty && contact.iName.$error.required")
-            span#nameErrorStatus.sr-only(ng-if="contact.iName.$dirty && contact.iName.$error.required") (error)
-          .form-group.has-feedback(ng-class="{'has-error': contact.iEmail.$dirty && (contact.iEmail.$error.required || contact.iEmail.$error.email), 'has-success': contact.iEmail.$valid}")
-            label(for='email-field') E-mail Address
-            input#email-field.form-control(type='email' placeholder='Enter email' required ng-model='inquiry.email' name="iEmail")
-            span.glyphicon.glyphicon-ok.form-control-feedback(aria-hidden="true" ng-if="contact.iEmail.$valid")
-            span#emailSuccessStatus.sr-only(ng-if="contact.iEmail.$valid") (success)
-            span.glyphicon.glyphicon-remove.form-control-feedback(aria-hidden="true" ng-if="contact.iEmail.$dirty && (contact.iEmail.$error.required || contact.iEmail.$error.email)")
-            span#emailErrorStatus.sr-only(ng-if="contact.iEmail.$dirty && contact.iEmail.$error.required") (error)
-          .form-group
-            label(for='phone-field') Phone Number
-            input#phone-field.form-control(type='phone' placeholder='Enter Phone Number' ng-model='inquiry.phone' name="iPhone")           
-          .form-group(ng-class="{'has-error': contact.iMessage.$dirty && contact.iMessage.$error.required, 'has-success': contact.iMessage.$valid}")
-            label(for='message-field') Message
-            textarea#message-field.form-control(placeholder='Enter message' ng-model='inquiry.message' name="iMessage" required)
-          button.btn.btn-default(type='submit', ng-click='sendMail' ng-disabled="!contact.$valid") Send Message  
-    .row
-      .col-md-8.col-md-offset-2
-        h2 Connect with me
-        p Call me up on 
-          strong +234-813-265-6830.
-          | Send me an e-mail on 
-          a(href='mailto:chidiebere.nnadi@gmail.com') chidiebere.nnadi@gmail.com
-          |  and ensure to connect with me on any of these platforms. I am almost always available on social media so give me a buzz.
-        |             
-        .connect-icons
-          ul.list-inline
-            li
-              a(href='http://github.com/andela-cnnadi')
-                img(src='img/github.png')         
-            li
-              a(href='http://facebook.com/chidiebere.nnadi')
-                img(src='img/facebook.png')
-            li
-              a(href='http://twitter.com/Chydeeybere')
-                img(src='img/twitter.png')
-            li
-              a(href='http://linked.in/pub/chidiebere')
-                img(src='img/linkedin.png')
+          .section-content(ng-if="selectedSection == 'design'")
+            h2.content-text Content Loading...
+            p I've spent most of the past few years doing mostly coding and hence haven't had time to build my design portfolio. I do have a couple of things I've worked on but there has been little time to put them together. Be sure to check back for an update.
+    section#contact-section
+      .container
+        .row
+          .col-md-8.col-md-offset-2
+            h2 Get in touch      
+            p Get in touch with me to discuss interesting ideas around Software Development, Mobile Application Development, Open Source any other thing worth the while.        
+            form#contact-form(novalidate name="contact" ng-submit="sendMessage()")
+              .form-group.has-feedback(ng-class="{'has-error': contact.iName.$dirty && contact.iName.$error.required, 'has-success': contact.iName.$valid}")
+                label(for='name-field') Name               
+                input#name-field.form-control(type='text' placeholder='Enter name' required ng-model='inquiry.name' name="iName")
+                span.glyphicon.glyphicon-ok.form-control-feedback(aria-hidden="true" ng-if="contact.iName.$valid")
+                span#nameSuccessStatus.sr-only(ng-if="contact.iName.$valid") (success)
+                span.glyphicon.glyphicon-remove.form-control-feedback(aria-hidden="true" ng-if="contact.iName.$dirty && contact.iName.$error.required")
+                span#nameErrorStatus.sr-only(ng-if="contact.iName.$dirty && contact.iName.$error.required") (error)
+              .form-group.has-feedback(ng-class="{'has-error': contact.iEmail.$dirty && (contact.iEmail.$error.required || contact.iEmail.$error.email), 'has-success': contact.iEmail.$valid}")
+                label(for='email-field') E-mail Address
+                input#email-field.form-control(type='email' placeholder='Enter email' required ng-model='inquiry.email' name="iEmail")
+                span.glyphicon.glyphicon-ok.form-control-feedback(aria-hidden="true" ng-if="contact.iEmail.$valid")
+                span#emailSuccessStatus.sr-only(ng-if="contact.iEmail.$valid") (success)
+                span.glyphicon.glyphicon-remove.form-control-feedback(aria-hidden="true" ng-if="contact.iEmail.$dirty && (contact.iEmail.$error.required || contact.iEmail.$error.email)")
+                span#emailErrorStatus.sr-only(ng-if="contact.iEmail.$dirty && contact.iEmail.$error.required") (error)
+              .form-group
+                label(for='phone-field') Phone Number
+                input#phone-field.form-control(type='phone' placeholder='Enter Phone Number' ng-model='inquiry.phone' name="iPhone")           
+              .form-group(ng-class="{'has-error': contact.iMessage.$dirty && contact.iMessage.$error.required, 'has-success': contact.iMessage.$valid}")
+                label(for='message-field') Message
+                textarea#message-field.form-control(placeholder='Enter message' ng-model='inquiry.message' name="iMessage" required)
+              button.btn.btn-default(type='submit', ng-click='sendMail' ng-disabled="!contact.$valid") Send Message  
+        .row
+          .col-md-8.col-md-offset-2
+            h2 Connect with me
+            p Call me up on 
+              strong +234-813-265-6830.
+              | Send me an e-mail on 
+              a(href='mailto:chidiebere.nnadi@gmail.com') chidiebere.nnadi@gmail.com
+              |  and ensure to connect with me on any of these platforms. I am almost always available on social media so give me a buzz.
+            |             
+            .connect-icons
+              ul.list-inline
+                li
+                  a(href='http://github.com/andela-cnnadi')
+                    img(src='img/github.png')         
+                li
+                  a(href='http://facebook.com/chidiebere.nnadi')
+                    img(src='img/facebook.png')
+                li
+                  a(href='http://twitter.com/Chydeeybere')
+                    img(src='img/twitter.png')
+                li
+                  a(href='http://linked.in/pub/chidiebere')
+                    img(src='img/linkedin.png')
