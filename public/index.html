@@ -47,18 +47,16 @@
         <h1>I build awesome products and experiences.</h1>
         <h3>Teacher. Web Engineer. Designer. Polymath.</h3>
       </div>
-      <div class="container">
-        <div class="twitter-feed">
-          <div class="left-positioned tick"></div>
-          <div class="right-positioned tick"></div>
-          <div class="twitter-nav-bar"><i class="glyphicon glyphicon-cloud"></i>&nbsp; Twitter Feed</div>
-          <div class="twitter-content">
-            <span ng-if="!selectedTweet">Loading tweets...</span>
-            <div ng-if="selectedTweet" class="tweet-image" ng-cloak><img src="{{ selectedTweet.retweeted_status ? selectedTweet.retweeted_status.user.profile_image_url : selectedTweet.user.profile_image_url }}"/></div>
-            <div ng-if="selectedTweet" class="tweet-text" ng-cloak>
-              <span ng-bind-html="selectedTweet.text | htmlLinky"></span>
-              <p class="tweet-time">{{selectedTweet.created_at | timeago}}</p>
-            </div>
+      <div class="twitter-feed">
+        <div class="left-positioned tick"></div>
+        <div class="right-positioned tick"></div>
+        <div class="twitter-nav-bar"><i class="mdi mdi-twitter"></i>&nbsp; Twitter Feed</div>
+        <div class="twitter-content">
+          <span ng-if="!selectedTweet">Loading tweets...</span>
+          <div ng-if="selectedTweet" class="tweet-image" ng-cloak><img src="{{ selectedTweet.retweeted_status ? selectedTweet.retweeted_status.user.profile_image_url : selectedTweet.user.profile_image_url }}"/></div>
+          <div ng-if="selectedTweet" class="tweet-text" ng-cloak>
+            <span ng-bind-html="selectedTweet.text | htmlLinky"></span>
+            <p class="tweet-time">{{selectedTweet.created_at | timeago}}</p>
           </div>
         </div>
       </div>

@@ -44,16 +44,18 @@ app.controller('CoreNavController', ['$scope', '$location', '$timeout', '$anchor
   };
 
   $(window).scroll(function() {
-    if(inverse) {
-      if($(window).scrollTop() <= 70) {
-        inverse = false;
-        $('#home-section header').removeClass('fixed');
-      }
+    distanceFromTop = $(window).scrollTop()
+    if(distanceFromTop <= 70) {
+      $('#home-section header').removeClass('fixed');
+    }
+    else {
+      $('#home-section header').addClass('fixed');
+    }
+
+    if(distanceFromTop >= $('#home-section').height() - $('.twitter-feed').height() - 90) {
+      $('.twitter-feed').addClass('fixed');
     } else {
-      if($(window).scrollTop() > 70) {
-        inverse = true;
-        $('#home-section header').addClass('fixed');
-      }
+      $('.twitter-feed').removeClass('fixed');
     }
   });
 }]);

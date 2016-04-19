@@ -133,6 +133,14 @@ section#home-section .twitter-feed {
   z-index: 90;
 }
 
+section#home-section .twitter-feed.fixed {
+  position: fixed;
+  top: 90px;
+  bottom: auto;
+  margin: 0 auto;
+  border-bottom: solid 1px #dedede;
+}
+
 .tick {
   position: absolute;
   bottom: -15px;
