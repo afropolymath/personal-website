@@ -57,7 +57,7 @@ var app = express();
       access_token_secret: '4r6pZOsCh0A5xKkAdljKrS3lSrAIA0EZUHBGBW5bBfEX7'
     });
 
-    var params = {screen_name: 'Chydeeybere', count: 10};
+    var params = {screen_name: 'afropolymath', count: 10};
     client.get('statuses/user_timeline', params, function(error, tweets, response){
       if (!error) {
         res.json(tweets);
