@@ -25,6 +25,6 @@
   },
   "resolutions": {
     "firebase": "2.1.x",
-    "angular": "1.5.8"
+    "angular": "1.5.11"
   }
 }
