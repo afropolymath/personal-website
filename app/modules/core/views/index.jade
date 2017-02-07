@@ -5,56 +5,64 @@
     section#about-section
       .row
         .col-md-12
-          h2 About the Afropolymath          
-          p I'm Chidiebere I Nnadi and I graduated with an degree in EE from 
+          h2 About          
+          p I'm Chidiebere I. Nnadi. I'm a software developer and product designer. I graduated with an degree in EE from 
             a(href="http://covenantuniversity.edu.ng") this school
-            |  in 2012. I have been writing code for the web since 2007 but only started seriously building products in 2010. I consider myself a Full Stack Web Developer and I have worked with several programming languages including Python, PHP, Javascript, Java and very little Perl.          
-          p I currently teach Software Development at 
+            |  in 2012. I have been writing code for the web since 2007 but only started seriously building products in 2010. I am a Full Stack Web Developer and I have worked with several programming languages including Javascript, Python, PHP, Java and a little Perl.          
+          
+          p I 
+            span.str-t currently
+            |  used to teach Software Development at  
             a(href="http://andela.com") Andela
-            |  here in Lagos, Nigeria.            
-          p In my spare time I enjoy listening to good music and just thinking about crazy ideas.            
-          h2 Stack Update (As at 17.04.2016)         
-          p TLDR Version - Currently still learning Python. Using web application frameworks like Django and Flask. Playing around with lots of Python Tools (Will share my best links soon. There are so many!). For infrastructure, I'm still using Amazon AWS for real work and Heroku for smaller projects (Like this site). For Databases I'm using PostgreSQL, Firebase and Redis. FrontEnd is a serious issue right now. Sticking to Angular 1.X for mission critical stuff but learning ReactJS and VueJS. Using Semantic UI for web components, Bootstrap and Flexgrid for Grid and Layouts, and building everything else from scratch.  
-          p At the heart of my development is my pencil, sketchbook and Photoshop which I make use of for prototyping.         
-          p Click here to view the latest Stack Update post  
-        .col-md-12
-          h1 Stuff I know!
-          .skill-set
-            //- .skill-ranges
-            //-   .col-xs-4
-            //-     .beginner.marker              
-            //-   .col-xs-4.text-center
-            //-     .proficient.marker             
-            //-   .col-xs-4.text-right
-            //-     .expert.marker
-            .skill-block(ng-repeat="skill in skills")
-              .title
-                i.mdi(ng-class="skill.icon")
-                | {{skill.name}} 
-              .skill-bar
-                .skill-progress(style='width:{{skill.value}}%') 
+            |  here in Lagos, Nigeria. I currently work as a freelance Software Engineer at  
+            a(href="http://gigster.com") Gigster.             
+          p In my spare time I enjoy listening to good music and just thinking about crazy ideas.
+          p
+            a(href="afropolymath.svbtle.com") Click here to view my blog  
     section#what-i-do-section
       .what-i-do-header
         img(src="img/what_i_do_header.png")
       .row
         .col-md-6.build-software.section-header(ng-class="{selected: selectedSection == 'build'}" ng-click="selectedSection = 'build'")
           h2 Code
-          p I build applications for the web mostly but can also build for mobile, desktop and embedded systems.     
+          p I build applications for the web mostly but also occassionally build for mobile, desktop and embedded systems.     
         .col-md-6.design-software.section-header(ng-class="{selected: selectedSection == 'design'}" ng-click="selectedSection = 'design'")
           h2 Design
           p I enjoy building extremely beautiful experiences and aesthetically pleasing functional software.
       .row
         .col-md-12
           .section-content(ng-if="selectedSection == 'build'")
-            h2.content-text.spacer Open Source Programmer Tools
-            p There have been several occassions when I find myself working in a repetitive manner or doing something that I find complex more than once. I decided some time ago to begin creating tools that would help me (first and foremost) and eventually any other programmer, make building things easier and faster. The kinds of tools I've been creating so far have been short code snippets that perform a single operation, CSS libraries and ORMs.
-            h2.content-text Utilities
-            p Another of my major interests is developing utility applications (for web, desktop or mobile) that could eventually turn into profitable businesses. I've worked on quite a few, though not finished with any yet, and I'm interested in collaborating on any of these ideas.
-            p My major areas of focus here include education, services, advertising and expert systems.
+            h2.content-text.spacer Recent articles
+            ul.fancy-article-list
+              li
+                a(href="https://www.pluralsight.com/guides/python/build-a-simple-file-storage-service-using-vuejs-flask-and-rethinkdb") Build a simple file storage service using Vue.js, Flask and RethinkDB (Part I)
+              li
+                a(href="https://afropolymath.svbtle.com/authentication-using-django-rest-framework") Demystifying Token-Based Authentication using Django REST Framework
+              li
+                a(href="https://afropolymath.svbtle.com/intercept-route-requests-using-decorators-in-flask") Creating Somewhat Middleware using Decorators in Flask
+            h2.content-text.spacer Open Source/Interesting things I've built
+            p Occassionally I create simple tools to help myself and possibly other programmers do their work more easily and with less repetition.
+            ul.fancy-article-list
+              li
+                a(href="http://github.com/afropolymath/pyfirebase") PyFirebase - Firebase Python Plugin
+              li
+                a(href="https://github.com/afropolymath/restpi") RestPi - Python IOT Control Library for Raspberry Pi
+              li
+                a(href="https://github.com/afropolymath/flexgrid") FlexGrid - Flexbox CSS Layout System
+              li
+                a(href="https://github.com/afropolymath/seamless") Seamless - SMS to E-mail script
+              li
+                a(href="https://github.com/afropolymath/webfiles") WebFiles (WIP) - File Manager UI
+            p.spacer I'm interested in collaborating on new and interesting ideas. Check out my Github to see other interesting things I'm working on
 
           .section-content(ng-if="selectedSection == 'design'")
-            h2.content-text Content Loading...
-            p I've spent most of the past few years doing mostly coding and hence haven't had time to build my design portfolio. I do have a couple of things I've worked on but there has been little time to put them together. Be sure to check back for an update.
+            h2.content-text Portfolio.
+            p In the past few months I've had time to work on artwork for my growing design porfolio. All of that stuff is hosted on Behance and Dribbble for now until I'm able to create a display within this site for that :).
+            ul.fancy-article-list
+              li
+                a(href="http://behance.com/chidieberennadi" target="_blank") Behance Portfolio
+              li
+                a(href="http://dribbble.com/chidieberennadi" target="_blank") Dribbble Portfolio
     section#contact-section
       .row
         .col-md-8.col-md-offset-2
